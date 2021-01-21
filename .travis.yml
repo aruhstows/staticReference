@@ -1,12 +1,8 @@
-
 language: csharp
-solution: VulnerableDotNet.sln
-  
 mono: none
-dotnet: 2.1
-os: linux
-install:
-  - dotnet restore
+dotnet: 2.1.502
+script:
+ - dotnet restore
 
  after_success:
   - bash <(curl -s https://scripts.scantist.com/ci-travis.sh)
