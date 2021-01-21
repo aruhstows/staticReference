@@ -1,0 +1,10 @@
+
+language: csharp
+solution: VulnerableDotNet.sln
+  
+mono:
+ - latest
+ - 3.12.0
+
+ after_success:
+  - bash <(curl -s https://scripts.scantist.com/ci-travis.sh)
